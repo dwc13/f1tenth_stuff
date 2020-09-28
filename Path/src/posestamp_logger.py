@@ -34,7 +34,7 @@ def shutdown():
     print('Logger Closed')
  
 def listener():
-    rospy.init_node('logger', anonymous=True)
+    rospy.init_node('posestamp_logger', anonymous=True)
     rospy.Subscriber('vesc/odom', Odometry, save_posestamp)
     rospy.spin()
 
